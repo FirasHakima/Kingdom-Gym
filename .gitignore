@@ -1,0 +1,10 @@
+dist/
+dist-backend/
+node_modules/
+.env
+data/
+portable-node/
+electron/node.exe
+frontend/build/
+backend/frontend/build/
+*.xlsx

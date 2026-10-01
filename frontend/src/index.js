@@ -1,0 +1,1 @@
+﻿import React from "react"; import ReactDOM from "react-dom/client"; import App from "./App"; import "./index.css"; import dayjs from "dayjs"; import "dayjs/locale/fr"; dayjs.locale("fr"); ReactDOM.createRoot(document.getElementById("root")).render(<App />);

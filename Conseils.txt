@@ -1,0 +1,27 @@
+🟡 Ce qu'ils doivent faire (une fois par semaine):
+
+Copier le fichier backup du Bureau vers une clé USB
+Garder les 2-3 derniers fichiers backup sur la clé
+C'est tout — 30 secondes de travail
+
+
+🔴 En cas de problème (PC cassé, app ne démarre plus):
+
+Installer l'app sur un nouveau PC depuis la clé USB
+Aller dans %APPDATA%\KingdomGym\data\
+Remplacer le fichier kingdom-gym.db par le backup de la clé USB
+Redémarrer l'app → toutes les données sont récupérées
+
+
+Ce qu'ils ne perdront JAMAIS:
+
+✅ Membres
+✅ Forfaits
+✅ Paiements
+✅ Historique complet
+✅ Dettes
+
+
+La règle d'or:
+
+"La clé USB = l'assurance de la salle. Une fois par semaine, 30 secondes."

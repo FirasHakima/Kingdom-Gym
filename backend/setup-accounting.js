@@ -1,0 +1,12 @@
+const Database=require("better-sqlite3");
+const path=require("path");
+const db=new Database(path.join(__dirname,"../data/kingdom-gym.db"));
+db.pragma("foreign_keys=OFF");
+db.exec(`CREATE TABLE IF NOT EXISTS products (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, price REAL NOT NULL, description TEXT, stock INTEGER DEFAULT 0, created_at TEXT)`);
+db.exec(`CREATE TABLE IF NOT EXISTS sales (id INTEGER PRIMARY KEY AUTOINCREMENT, product_id INTEGER, product_name TEXT, unit_price REAL NOT NULL, quantity INTEGER NOT NULL DEFAULT 1, total REAL NOT NULL, notes TEXT, created_at TEXT)`);
+db.exec(`CREATE TABLE IF NOT EXISTS charges (id INTEGER PRIMARY KEY AUTOINCREMENT, label TEXT NOT NULL, amount REAL NOT NULL, month TEXT NOT NULL, notes TEXT, created_at TEXT)`);
+console.log("Tables created!");
+console.log("Products:",db.prepare("SELECT COUNT(*) as c FROM products").get().c);
+console.log("Sales:",db.prepare("SELECT COUNT(*) as c FROM sales").get().c);
+console.log("Charges:",db.prepare("SELECT COUNT(*) as c FROM charges").get().c);
+db.close();

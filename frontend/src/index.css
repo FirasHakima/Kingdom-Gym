@@ -1,0 +1,65 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --red: #E31E24;
+  --bg: #0A0A0A;
+  --card: #111111;
+  --card2: #1A1A1A;
+  --border: #1f1f1f;
+  --text: #ffffff;
+  --muted: #555555;
+  --input: #0f0f0f;
+  --hover: #1a1a1a;
+  --sidebar: #0D0D0D;
+}
+
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); transition: background 0.2s, color 0.2s; }
+
+.page-title { font-size: 26px; font-weight: 800; color: var(--text); }
+.page-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 8px; border: none; cursor: pointer; font-size: 14px; font-weight: 600; transition: all 0.15s; }
+.btn-red { background: var(--red); color: #fff; box-shadow: 0 2px 12px rgba(227,30,36,0.3); }
+.btn-red:hover { background: #c41a20; }
+.btn-outline { background: var(--card2); border: 1px solid var(--border); color: var(--text); }
+.btn-sm { padding: 7px 14px; font-size: 13px; }
+
+/* Shared card layout helpers */
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+.card-header { display: flex; align-items: center; gap: 16px; padding: 20px 24px; border-bottom: 1px solid var(--border); }
+.card-body { padding: 16px 24px 20px; display: flex; flex-wrap: wrap; gap: 12px; align-items: stretch; }
+.card-actions { display: flex; gap: 8px; align-items: center; }
+.card-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 10px; font-size: 12px; font-weight: 700; background: var(--card2); border: 1px solid var(--border); color: var(--muted); }
+
+.icon-circle { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: var(--card2); border: 1px solid var(--border); }
+
+.plan-card { background: var(--card2); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; min-width: 160px; position: relative; overflow: hidden; flex: 0 0 auto; }
+.plan-card__bar { position: absolute; top: 0; left: 0; width: 3px; height: 100%; border-radius: 3px 0 0 3px; }
+.plan-card__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.plan-card__actions { display: flex; gap: 4px; }
+.plan-card__footer { font-size: 12px; color: var(--muted); margin-top: 6px; }
+
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-size: 12px; font-weight: 600; color: var(--muted); margin-bottom: 6px; letter-spacing: 0.5px; }
+.form-control { width: 100%; padding: 11px 14px; background: var(--input); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 14px; outline: none; transition: border-color 0.2s; box-sizing: border-box; }
+.form-control:focus { border-color: var(--red); box-shadow: 0 0 0 3px rgba(227,30,36,0.08); }
+select.form-control option { background: var(--card); color: var(--text); }
+
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 20px; }
+.modal { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 28px; width: 100%; max-width: 480px; max-height: 90vh; overflow-y: auto; border-top: 3px solid var(--red); }
+.modal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.modal-title { font-size: 18px; font-weight: 700; color: var(--text); }
+
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th { padding: 12px 16px; text-align: left; font-size: 11px; font-weight: 700; color: var(--muted); letter-spacing: 1px; border-bottom: 1px solid var(--border); background: var(--card2); white-space: nowrap; }
+td { padding: 13px 16px; border-bottom: 1px solid var(--border); font-size: 14px; color: var(--text); }
+tr:hover td { background: var(--hover); }
+
+.badge { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; }
+.badge-active { background: rgba(74,222,128,0.1); color: #4ade80; border: 1px solid #4ade80; }
+.badge-expired { background: rgba(227,30,36,0.1); color: #E31E24; border: 1px solid #E31E24; }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
